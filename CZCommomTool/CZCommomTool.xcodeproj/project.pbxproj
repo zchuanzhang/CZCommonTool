@@ -15,6 +15,7 @@
 		5CEF75E9254ACAED004C23A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF75E8254ACAED004C23A5 /* main.m */; };
 		5CEF75F3254ACAED004C23A5 /* CZCommomToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF75F2254ACAED004C23A5 /* CZCommomToolTests.m */; };
 		5CEF75FE254ACAED004C23A5 /* CZCommomToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF75FD254ACAED004C23A5 /* CZCommomToolUITests.m */; };
+		5CEF7617254AD146004C23A5 /* UIButton+CZ_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF7616254AD146004C23A5 /* UIButton+CZ_Button.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5CEF75F9254ACAED004C23A5 /* CZCommomToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZCommomToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEF75FD254ACAED004C23A5 /* CZCommomToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZCommomToolUITests.m; sourceTree = "<group>"; };
 		5CEF75FF254ACAED004C23A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CEF7615254AD146004C23A5 /* UIButton+CZ_Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZ_Button.h"; sourceTree = "<group>"; };
+		5CEF7616254AD146004C23A5 /* UIButton+CZ_Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZ_Button.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		5CEF75D5254ACAEC004C23A5 /* CZCommomTool */ = {
 			isa = PBXGroup;
 			children = (
+				5CEF7614254AD127004C23A5 /* Catagory */,
 				5CEF75D6254ACAEC004C23A5 /* AppDelegate.h */,
 				5CEF75D7254ACAEC004C23A5 /* AppDelegate.m */,
 				5CEF75DC254ACAEC004C23A5 /* ViewController.h */,
@@ -130,6 +134,15 @@
 				5CEF75FF254ACAED004C23A5 /* Info.plist */,
 			);
 			path = CZCommomToolUITests;
+			sourceTree = "<group>";
+		};
+		5CEF7614254AD127004C23A5 /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				5CEF7615254AD146004C23A5 /* UIButton+CZ_Button.h */,
+				5CEF7616254AD146004C23A5 /* UIButton+CZ_Button.m */,
+			);
+			path = Catagory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEF7617254AD146004C23A5 /* UIButton+CZ_Button.m in Sources */,
 				5CEF75DE254ACAEC004C23A5 /* ViewController.m in Sources */,
 				5CEF75D8254ACAEC004C23A5 /* AppDelegate.m in Sources */,
 				5CEF75E9254ACAED004C23A5 /* main.m in Sources */,
