@@ -6,6 +6,8 @@
 //
 
 #import "CZ_CommonTool.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <netinet/in.h>
 
 @implementation CZ_CommonTool
 
@@ -101,4 +103,62 @@
     
     return font;
 }
+
++ (CZ_NetWorkState)getNetWorkStatesWithHostName:(NSString *)hostName {
+    
+    
+    CZ_NetWorkState netWorkState = CZ_NetWorkState_None;
+    
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(NULL, [hostName UTF8String]);
+    SCNetworkReachabilityFlags flags;
+    
+    if (SCNetworkReachabilityGetFlags(reachability, &flags)) {
+        
+        BOOL isLocalW = NO;
+        struct sockaddr_in localWifiAddress;
+        bzero(&localWifiAddress, sizeof(localWifiAddress));
+        localWifiAddress.sin_len = sizeof(localWifiAddress);
+        localWifiAddress.sin_family = AF_INET;
+        // IN_LINKLOCALNETNUM is defined in <netinet/in.h> as 169.254.0.0.
+        localWifiAddress.sin_addr.s_addr = htonl(IN_LINKLOCALNETNUM);
+        
+        
+        if ((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect))
+        {
+            netWorkState = CZ_NetWorkState_WiFi;
+        }
+        
+        
+        
+        
+        if (isLocalW) {
+            
+        }else{
+            
+            if ((flags & kSCNetworkReachabilityFlagsReachable) == 0) {
+                return CZ_NetWorkState_None;
+            }
+            if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0) {
+                netWorkState = CZ_NetWorkState_WiFi;
+            }
+            
+            if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
+                 (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0)) {
+                if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0) {
+                    netWorkState = CZ_NetWorkState_WiFi;
+                }
+            }
+            
+            if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN) {
+                /*
+                 ... but WWAN connections are OK if the calling application is using the CFNetwork APIs.
+                 */
+                netWorkState = CZ_NetWorkState_WWAN;
+            }
+        }
+    }
+    
+    return netWorkState;
+}
+
 @end

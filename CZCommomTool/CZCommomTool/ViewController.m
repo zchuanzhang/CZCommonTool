@@ -22,6 +22,7 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.text = @"测试中";
     
+  NSLog(@"测试网络 %ld",[CZ_CommonTool getNetWorkStatesWithHostName:@"www.baidu.com"]);
     
 }
 

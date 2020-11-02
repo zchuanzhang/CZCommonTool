@@ -8,6 +8,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, CZ_NetWorkState) {
+    CZ_NetWorkState_None,
+    CZ_NetWorkState_WWAN,
+    CZ_NetWorkState_WiFi //
+};
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CZ_CommonTool : NSObject
@@ -51,9 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIFont *)gainFontWithName:(NSString *)fontName size:(CGFloat)fontSize;
 
 
-
-
-
+/// 获取网络状态
+/// @param hostName 地址
++ (CZ_NetWorkState)getNetWorkStatesWithHostName:(NSString *)hostName;
 
 @end
 

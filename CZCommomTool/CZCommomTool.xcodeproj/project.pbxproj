@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C1D35E4254FA33E00563EE2 /* CZ_Pch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZ_Pch.pch; sourceTree = "<group>"; };
 		5CC58816254B9E6600DD48DC /* CZ_CommonTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZ_CommonTool.h; sourceTree = "<group>"; };
 		5CC58817254B9E6600DD48DC /* CZ_CommonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZ_CommonTool.m; sourceTree = "<group>"; };
 		5CEF75D3254ACAEC004C23A5 /* CZCommomTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZCommomTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1D35E2254FA2C700563EE2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5C1D35E4254FA33E00563EE2 /* CZ_Pch.pch */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		5CC58815254B9E3900DD48DC /* CZ_Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +136,7 @@
 				5CEF75E7254ACAED004C23A5 /* Info.plist */,
 				5CEF75E8254ACAED004C23A5 /* main.m */,
 				5CC58815254B9E3900DD48DC /* CZ_Common */,
+				5C1D35E2254FA2C700563EE2 /* Base */,
 			);
 			path = CZCommomTool;
 			sourceTree = "<group>";
@@ -465,6 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922DKK6RF9;
+				GCC_PREFIX_HEADER = /Users/chuanzhang/Desktop/gitHub/CZCommonTool/CZCommomTool/CZCommomTool/Base/CZ_Pch.pch;
 				INFOPLIST_FILE = CZCommomTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,6 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922DKK6RF9;
+				GCC_PREFIX_HEADER = /Users/chuanzhang/Desktop/gitHub/CZCommonTool/CZCommomTool/CZCommomTool/Base/CZ_Pch.pch;
 				INFOPLIST_FILE = CZCommomTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
